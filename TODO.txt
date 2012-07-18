@@ -1,0 +1,7 @@
+COlorChannelMixer TODO
+======================
+
+- Gui tweaks
+- Reword Gui to speak english (use translations?)
+- Make the process cancelable.
+- Make the prog process CLI args without forms.
