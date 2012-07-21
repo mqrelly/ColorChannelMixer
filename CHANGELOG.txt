@@ -1,0 +1,4 @@
+ColorChannelMixer Changelog
+===========================
+
+- Make the process cancelable.

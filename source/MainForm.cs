@@ -91,12 +91,11 @@ namespace ColorChannelMixer
 
         private void SetGuiEnabled( bool enabled )
         {
-            this.SourceNumber_TrackBar.Enabled = enabled;
+            this.SourceNumer_Panel.Enabled = enabled;
             this.Source1_Panel.Enabled = enabled;
             this.Source2_Panel.Enabled = enabled;
             this.Source3_Panel.Enabled = enabled;
-            this.WorkingDirectory_Browser_Button.Enabled = enabled;
-            this.Process_Button.Enabled = enabled;
+            this.WorkingDirectory_Panel.Enabled = enabled;
         }
 
         #endregion
@@ -113,7 +112,15 @@ namespace ColorChannelMixer
 
         private void Process_Button_Click( object sender, EventArgs e )
         {
-            this.Process_Start();
+            if( this.Process_Worker.IsBusy )
+            {
+                this.Process_Worker.CancelAsync();
+                this.Process_Button.Enabled = false;
+            }
+            else
+            {
+                this.Process_Start();
+            }
         }
 
         #endregion
@@ -162,6 +169,7 @@ namespace ColorChannelMixer
             this.SetGuiEnabled(false);
             this.Process_ProgressBar.Maximum = matching_file_names.Count;
             this.Process_ProgressBar.Visible = true;
+            this.Process_Button.Text = "Megszakít";
 
             // Start worker thread with
             this.Process_Worker.RunWorkerAsync(new ProcessArguments()
@@ -193,6 +201,13 @@ namespace ColorChannelMixer
             Bitmap result = null;
             for( int i = 0; i < args.FileNames.Count; ++i )
             {
+                if( worker.CancellationPending )
+                {
+                    e.Cancel = true;
+                    e.Result = (DateTime.UtcNow - start_time).TotalSeconds;
+                    return;
+                }
+
                 var sources = new Bitmap[args.FileNames[i].Length - 1];
                 try
                 {
@@ -203,7 +218,7 @@ namespace ColorChannelMixer
 
                     // Do the processing
                     ColorChannelMixer.ProcessImage(sources, args.Filters, ref result);
-                   
+
                     // Save result image
                     result.Save(System.IO.Path.Combine(
                         args.WorkingDir, args.FileNames[i][rslt_ind]));
@@ -253,13 +268,36 @@ namespace ColorChannelMixer
             // Restore Gui
             this.Process_ProgressBar.Visible = false;
             this.SetGuiEnabled(true);
+            this.Process_Button.Text = "Feldolgozás";
+            this.Process_Button.Enabled = true;
 
-            MessageBox.Show(
-                this,
-                string.Format("Eltelt idő: {0:0}s", (double)e.Result),
-                "Kész",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Information);
+            if( e.Cancelled )
+            {
+                MessageBox.Show(
+                    this,
+                    "Felhasználó megszakította.",
+                    "Kész",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
+            else if( e.Error != null )
+            {
+                MessageBox.Show(
+                    this,
+                    string.Format("Hiba történt: {0}\n", e.Error.Message),
+                    "Hiba",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show(
+                    this,
+                    string.Format("Eltelt idő: {0:0}s", (double)e.Result),
+                    "Kész",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+            }
         }
 
         #endregion

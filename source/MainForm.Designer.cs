@@ -43,32 +43,32 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Process_Button = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.SourceNumer_Panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SourceNumber_TrackBar = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
+            this.SourceNumber_Label = new System.Windows.Forms.Label();
             this.Source1_Panel = new System.Windows.Forms.Panel();
             this.Source1_ColorChannel_ComboBox = new System.Windows.Forms.ComboBox();
             this.Source1_FileNamePattern_TextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.WorkingDirectory_Panel = new System.Windows.Forms.Panel();
             this.WorkingDirectory_Browser_Button = new System.Windows.Forms.Button();
             this.WorkingDirectory_TextBox = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.WorkingDirectory_Label = new System.Windows.Forms.Label();
             this.Process_ProgressBar = new System.Windows.Forms.ProgressBar();
             this.WorkingDirectory_BrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.Process_Worker = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1.SuspendLayout();
             this.Source3_Panel.SuspendLayout();
             this.Source2_Panel.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.SourceNumer_Panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SourceNumber_TrackBar)).BeginInit();
             this.Source1_Panel.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.WorkingDirectory_Panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -80,9 +80,9 @@
             this.tableLayoutPanel1.Controls.Add(this.Source3_Panel, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.Source2_Panel, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.Process_Button, 0, 6);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.SourceNumer_Panel, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.Source1_Panel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.WorkingDirectory_Panel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.Process_ProgressBar, 0, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
@@ -112,7 +112,7 @@
             this.Source3_Panel.Margin = new System.Windows.Forms.Padding(0);
             this.Source3_Panel.Name = "Source3_Panel";
             this.Source3_Panel.Size = new System.Drawing.Size(360, 62);
-            this.Source3_Panel.TabIndex = 5;
+            this.Source3_Panel.TabIndex = 3;
             this.Source3_Panel.Visible = false;
             // 
             // Source3_ColorChannel_ComboBox
@@ -127,7 +127,7 @@
             this.Source3_ColorChannel_ComboBox.Location = new System.Drawing.Point(261, 5);
             this.Source3_ColorChannel_ComboBox.Name = "Source3_ColorChannel_ComboBox";
             this.Source3_ColorChannel_ComboBox.Size = new System.Drawing.Size(87, 22);
-            this.Source3_ColorChannel_ComboBox.TabIndex = 7;
+            this.Source3_ColorChannel_ComboBox.TabIndex = 2;
             this.Source3_ColorChannel_ComboBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ColorChannel_ComboBox_DrawItem);
             // 
             // Source3_FileNamePattern_TextBox
@@ -136,7 +136,7 @@
             this.Source3_FileNamePattern_TextBox.Name = "Source3_FileNamePattern_TextBox";
             this.Source3_FileNamePattern_TextBox.Size = new System.Drawing.Size(87, 21);
             this.Source3_FileNamePattern_TextBox.TabIndex = 4;
-            this.Source3_FileNamePattern_TextBox.Text = "*CTB*";
+            this.Source3_FileNamePattern_TextBox.Text = "*_*_*";
             // 
             // label11
             // 
@@ -144,7 +144,7 @@
             this.label11.Location = new System.Drawing.Point(137, 36);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 13);
-            this.label11.TabIndex = 2;
+            this.label11.TabIndex = 3;
             this.label11.Text = "Fájlnév minta";
             // 
             // label12
@@ -179,7 +179,7 @@
             this.Source2_Panel.Margin = new System.Windows.Forms.Padding(0);
             this.Source2_Panel.Name = "Source2_Panel";
             this.Source2_Panel.Size = new System.Drawing.Size(360, 62);
-            this.Source2_Panel.TabIndex = 4;
+            this.Source2_Panel.TabIndex = 2;
             // 
             // Source2_ColorChannel_ComboBox
             // 
@@ -193,7 +193,7 @@
             this.Source2_ColorChannel_ComboBox.Location = new System.Drawing.Point(261, 5);
             this.Source2_ColorChannel_ComboBox.Name = "Source2_ColorChannel_ComboBox";
             this.Source2_ColorChannel_ComboBox.Size = new System.Drawing.Size(87, 22);
-            this.Source2_ColorChannel_ComboBox.TabIndex = 6;
+            this.Source2_ColorChannel_ComboBox.TabIndex = 2;
             this.Source2_ColorChannel_ComboBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ColorChannel_ComboBox_DrawItem);
             // 
             // Source2_FileNamePattern_TextBox
@@ -202,7 +202,7 @@
             this.Source2_FileNamePattern_TextBox.Name = "Source2_FileNamePattern_TextBox";
             this.Source2_FileNamePattern_TextBox.Size = new System.Drawing.Size(87, 21);
             this.Source2_FileNamePattern_TextBox.TabIndex = 4;
-            this.Source2_FileNamePattern_TextBox.Text = "*cFOS*";
+            this.Source2_FileNamePattern_TextBox.Text = "*_cFOS_*";
             // 
             // label8
             // 
@@ -210,7 +210,7 @@
             this.label8.Location = new System.Drawing.Point(137, 36);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(71, 13);
-            this.label8.TabIndex = 2;
+            this.label8.TabIndex = 3;
             this.label8.Text = "Fájlnév minta";
             // 
             // label9
@@ -243,25 +243,25 @@
             this.Process_Button.Name = "Process_Button";
             this.Process_Button.Padding = new System.Windows.Forms.Padding(3);
             this.Process_Button.Size = new System.Drawing.Size(91, 32);
-            this.Process_Button.TabIndex = 0;
+            this.Process_Button.TabIndex = 6;
             this.Process_Button.Text = "Feldolgozás";
             this.Process_Button.UseVisualStyleBackColor = true;
             this.Process_Button.Click += new System.EventHandler(this.Process_Button_Click);
             // 
-            // panel2
+            // SourceNumer_Panel
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.SourceNumer_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.SourceNumber_TrackBar);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(360, 57);
-            this.panel2.TabIndex = 2;
+            this.SourceNumer_Panel.Controls.Add(this.label4);
+            this.SourceNumer_Panel.Controls.Add(this.label3);
+            this.SourceNumer_Panel.Controls.Add(this.label2);
+            this.SourceNumer_Panel.Controls.Add(this.SourceNumber_TrackBar);
+            this.SourceNumer_Panel.Controls.Add(this.SourceNumber_Label);
+            this.SourceNumer_Panel.Location = new System.Drawing.Point(0, 0);
+            this.SourceNumer_Panel.Margin = new System.Windows.Forms.Padding(0);
+            this.SourceNumer_Panel.Name = "SourceNumer_Panel";
+            this.SourceNumer_Panel.Size = new System.Drawing.Size(360, 57);
+            this.SourceNumer_Panel.TabIndex = 0;
             // 
             // label4
             // 
@@ -302,15 +302,15 @@
             this.SourceNumber_TrackBar.Value = 2;
             this.SourceNumber_TrackBar.ValueChanged += new System.EventHandler(this.SourceNumber_TrackBar_ValueChanged);
             // 
-            // label1
+            // SourceNumber_Label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Kombinálandó képek száma";
+            this.SourceNumber_Label.AutoSize = true;
+            this.SourceNumber_Label.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SourceNumber_Label.Location = new System.Drawing.Point(12, 9);
+            this.SourceNumber_Label.Name = "SourceNumber_Label";
+            this.SourceNumber_Label.Size = new System.Drawing.Size(165, 13);
+            this.SourceNumber_Label.TabIndex = 0;
+            this.SourceNumber_Label.Text = "Kombinálandó képek száma";
             // 
             // Source1_Panel
             // 
@@ -325,7 +325,7 @@
             this.Source1_Panel.Margin = new System.Windows.Forms.Padding(0);
             this.Source1_Panel.Name = "Source1_Panel";
             this.Source1_Panel.Size = new System.Drawing.Size(360, 62);
-            this.Source1_Panel.TabIndex = 3;
+            this.Source1_Panel.TabIndex = 1;
             // 
             // Source1_ColorChannel_ComboBox
             // 
@@ -339,7 +339,7 @@
             this.Source1_ColorChannel_ComboBox.Location = new System.Drawing.Point(261, 7);
             this.Source1_ColorChannel_ComboBox.Name = "Source1_ColorChannel_ComboBox";
             this.Source1_ColorChannel_ComboBox.Size = new System.Drawing.Size(87, 22);
-            this.Source1_ColorChannel_ComboBox.TabIndex = 5;
+            this.Source1_ColorChannel_ComboBox.TabIndex = 2;
             this.Source1_ColorChannel_ComboBox.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.ColorChannel_ComboBox_DrawItem);
             // 
             // Source1_FileNamePattern_TextBox
@@ -348,7 +348,7 @@
             this.Source1_FileNamePattern_TextBox.Name = "Source1_FileNamePattern_TextBox";
             this.Source1_FileNamePattern_TextBox.Size = new System.Drawing.Size(87, 21);
             this.Source1_FileNamePattern_TextBox.TabIndex = 4;
-            this.Source1_FileNamePattern_TextBox.Text = "*CTB*";
+            this.Source1_FileNamePattern_TextBox.Text = "*_CTB_*";
             // 
             // label7
             // 
@@ -356,7 +356,7 @@
             this.label7.Location = new System.Drawing.Point(137, 36);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 2;
+            this.label7.TabIndex = 3;
             this.label7.Text = "Fájlnév minta";
             // 
             // label6
@@ -378,18 +378,18 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Forrás 1";
             // 
-            // panel5
+            // WorkingDirectory_Panel
             // 
-            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.WorkingDirectory_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel5.Controls.Add(this.WorkingDirectory_Browser_Button);
-            this.panel5.Controls.Add(this.WorkingDirectory_TextBox);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Location = new System.Drawing.Point(0, 243);
-            this.panel5.Margin = new System.Windows.Forms.Padding(0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(360, 56);
-            this.panel5.TabIndex = 6;
+            this.WorkingDirectory_Panel.Controls.Add(this.WorkingDirectory_Browser_Button);
+            this.WorkingDirectory_Panel.Controls.Add(this.WorkingDirectory_TextBox);
+            this.WorkingDirectory_Panel.Controls.Add(this.WorkingDirectory_Label);
+            this.WorkingDirectory_Panel.Location = new System.Drawing.Point(0, 243);
+            this.WorkingDirectory_Panel.Margin = new System.Windows.Forms.Padding(0);
+            this.WorkingDirectory_Panel.Name = "WorkingDirectory_Panel";
+            this.WorkingDirectory_Panel.Size = new System.Drawing.Size(360, 56);
+            this.WorkingDirectory_Panel.TabIndex = 4;
             // 
             // WorkingDirectory_Browser_Button
             // 
@@ -400,7 +400,7 @@
             this.WorkingDirectory_Browser_Button.Name = "WorkingDirectory_Browser_Button";
             this.WorkingDirectory_Browser_Button.Padding = new System.Windows.Forms.Padding(3);
             this.WorkingDirectory_Browser_Button.Size = new System.Drawing.Size(28, 28);
-            this.WorkingDirectory_Browser_Button.TabIndex = 3;
+            this.WorkingDirectory_Browser_Button.TabIndex = 2;
             this.WorkingDirectory_Browser_Button.UseVisualStyleBackColor = true;
             this.WorkingDirectory_Browser_Button.Click += new System.EventHandler(this.WorkingDirectory_Browser_Button_Click);
             // 
@@ -411,27 +411,28 @@
             this.WorkingDirectory_TextBox.Name = "WorkingDirectory_TextBox";
             this.WorkingDirectory_TextBox.ReadOnly = true;
             this.WorkingDirectory_TextBox.Size = new System.Drawing.Size(286, 21);
-            this.WorkingDirectory_TextBox.TabIndex = 2;
+            this.WorkingDirectory_TextBox.TabIndex = 1;
             this.WorkingDirectory_TextBox.Text = "C:\\";
             // 
-            // label14
+            // WorkingDirectory_Label
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label14.Location = new System.Drawing.Point(12, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(97, 13);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Munkakönyvtár";
+            this.WorkingDirectory_Label.AutoSize = true;
+            this.WorkingDirectory_Label.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.WorkingDirectory_Label.Location = new System.Drawing.Point(12, 10);
+            this.WorkingDirectory_Label.Name = "WorkingDirectory_Label";
+            this.WorkingDirectory_Label.Size = new System.Drawing.Size(97, 13);
+            this.WorkingDirectory_Label.TabIndex = 0;
+            this.WorkingDirectory_Label.Text = "Munkakönyvtár";
             // 
             // Process_ProgressBar
             // 
             this.Process_ProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Process_ProgressBar.Location = new System.Drawing.Point(3, 302);
+            this.Process_ProgressBar.Location = new System.Drawing.Point(16, 302);
+            this.Process_ProgressBar.Margin = new System.Windows.Forms.Padding(16, 3, 12, 3);
             this.Process_ProgressBar.Name = "Process_ProgressBar";
-            this.Process_ProgressBar.Size = new System.Drawing.Size(354, 12);
-            this.Process_ProgressBar.TabIndex = 7;
+            this.Process_ProgressBar.Size = new System.Drawing.Size(332, 12);
+            this.Process_ProgressBar.TabIndex = 5;
             this.Process_ProgressBar.Visible = false;
             // 
             // WorkingDirectory_BrowserDialog
@@ -442,6 +443,7 @@
             // Process_Worker
             // 
             this.Process_Worker.WorkerReportsProgress = true;
+            this.Process_Worker.WorkerSupportsCancellation = true;
             this.Process_Worker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Process_Worker_DoWork);
             this.Process_Worker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.Process_Worker_ProgressChanged);
             this.Process_Worker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.Process_Worker_RunWorkerCompleted);
@@ -465,13 +467,13 @@
             this.Source3_Panel.PerformLayout();
             this.Source2_Panel.ResumeLayout(false);
             this.Source2_Panel.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.SourceNumer_Panel.ResumeLayout(false);
+            this.SourceNumer_Panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SourceNumber_TrackBar)).EndInit();
             this.Source1_Panel.ResumeLayout(false);
             this.Source1_Panel.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            this.WorkingDirectory_Panel.ResumeLayout(false);
+            this.WorkingDirectory_Panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,10 +483,10 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button Process_Button;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel SourceNumer_Panel;
         private System.Windows.Forms.Panel Source1_Panel;
         private System.Windows.Forms.TrackBar SourceNumber_TrackBar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label SourceNumber_Label;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -502,8 +504,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel WorkingDirectory_Panel;
+        private System.Windows.Forms.Label WorkingDirectory_Label;
         private System.Windows.Forms.Button WorkingDirectory_Browser_Button;
         private System.Windows.Forms.TextBox WorkingDirectory_TextBox;
         private System.Windows.Forms.ComboBox Source1_ColorChannel_ComboBox;

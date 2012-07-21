@@ -1,7 +1,6 @@
 COlorChannelMixer TODO
 ======================
 
-- Gui tweaks
-- Reword Gui to speak english (use translations?)
-- Make the process cancelable.
+- Set result image's dpi according to the dpi of the sources.
+- Reword Gui to speak english (use resource strings)
 - Make the prog process CLI args without forms.
