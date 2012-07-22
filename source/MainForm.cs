@@ -132,6 +132,7 @@ namespace ColorChannelMixer
             public string WorkingDir;
             public List<string[]> FileNames;
             public Color[] Filters;
+            public bool OverwriteExistingFiles;
         }
 
         private void Process_Start()
@@ -178,6 +179,7 @@ namespace ColorChannelMixer
                     WorkingDir = this.WorkingDirectory_TextBox.Text,
                     FileNames = matching_file_names,
                     Filters = filters.ToArray(),
+                    OverwriteExistingFiles = this.OverwriteExistingFiles_CheckBox.Checked,
                 });
         }
 
@@ -221,8 +223,17 @@ namespace ColorChannelMixer
                     ColorChannelMixer.ProcessImage_WithMarshal(sources, args.Filters, ref result);
 
                     // Save result image
-                    result.Save(System.IO.Path.Combine(
-                        args.WorkingDir, args.FileNames[i][rslt_ind]));
+                    string result_file = System.IO.Path.Combine(
+                        args.WorkingDir, args.FileNames[i][rslt_ind]);
+                    if( System.IO.File.Exists(result_file) &&
+                        !args.OverwriteExistingFiles )
+                    {
+                        throw new InvalidOperationException();
+                    }
+                    else
+                    {
+                        result.Save(result_file);
+                    }
 
                     worker.ReportProgress(i);
                 }

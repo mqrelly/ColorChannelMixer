@@ -62,6 +62,7 @@
             this.Process_ProgressBar = new System.Windows.Forms.ProgressBar();
             this.WorkingDirectory_BrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.Process_Worker = new System.ComponentModel.BackgroundWorker();
+            this.OverwriteExistingFiles_CheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.Source3_Panel.SuspendLayout();
             this.Source2_Panel.SuspendLayout();
@@ -383,13 +384,14 @@
             // 
             this.WorkingDirectory_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.WorkingDirectory_Panel.Controls.Add(this.OverwriteExistingFiles_CheckBox);
             this.WorkingDirectory_Panel.Controls.Add(this.WorkingDirectory_Browser_Button);
             this.WorkingDirectory_Panel.Controls.Add(this.WorkingDirectory_TextBox);
             this.WorkingDirectory_Panel.Controls.Add(this.WorkingDirectory_Label);
             this.WorkingDirectory_Panel.Location = new System.Drawing.Point(0, 243);
             this.WorkingDirectory_Panel.Margin = new System.Windows.Forms.Padding(0);
             this.WorkingDirectory_Panel.Name = "WorkingDirectory_Panel";
-            this.WorkingDirectory_Panel.Size = new System.Drawing.Size(360, 56);
+            this.WorkingDirectory_Panel.Size = new System.Drawing.Size(360, 76);
             this.WorkingDirectory_Panel.TabIndex = 4;
             // 
             // WorkingDirectory_Browser_Button
@@ -429,7 +431,7 @@
             // 
             this.Process_ProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Process_ProgressBar.Location = new System.Drawing.Point(16, 302);
+            this.Process_ProgressBar.Location = new System.Drawing.Point(16, 322);
             this.Process_ProgressBar.Margin = new System.Windows.Forms.Padding(16, 3, 12, 3);
             this.Process_ProgressBar.Name = "Process_ProgressBar";
             this.Process_ProgressBar.Size = new System.Drawing.Size(332, 12);
@@ -448,6 +450,18 @@
             this.Process_Worker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Process_Worker_DoWork);
             this.Process_Worker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.Process_Worker_ProgressChanged);
             this.Process_Worker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.Process_Worker_RunWorkerCompleted);
+            // 
+            // OverwriteFiles_CheckBox
+            // 
+            this.OverwriteExistingFiles_CheckBox.AutoSize = true;
+            this.OverwriteExistingFiles_CheckBox.Checked = true;
+            this.OverwriteExistingFiles_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.OverwriteExistingFiles_CheckBox.Location = new System.Drawing.Point(28, 53);
+            this.OverwriteExistingFiles_CheckBox.Name = "OverwriteExistingFiles_CheckBox";
+            this.OverwriteExistingFiles_CheckBox.Size = new System.Drawing.Size(133, 17);
+            this.OverwriteExistingFiles_CheckBox.TabIndex = 3;
+            this.OverwriteExistingFiles_CheckBox.Text = "Létező fájlok felülírása";
+            this.OverwriteExistingFiles_CheckBox.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
@@ -515,6 +529,7 @@
         private System.Windows.Forms.FolderBrowserDialog WorkingDirectory_BrowserDialog;
         private System.Windows.Forms.ProgressBar Process_ProgressBar;
         private System.ComponentModel.BackgroundWorker Process_Worker;
+        private System.Windows.Forms.CheckBox OverwriteExistingFiles_CheckBox;
     }
 }
 

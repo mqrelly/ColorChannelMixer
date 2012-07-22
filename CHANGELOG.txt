@@ -1,5 +1,6 @@
 ColorChannelMixer Changelog
 ===========================
 
+- Chekc existing files before overwrite.
 - 10x speedup in ProcessImage using Lock/UnlockBits() and Marshal.Read/WriteByte().
 - Make the process cancelable.
