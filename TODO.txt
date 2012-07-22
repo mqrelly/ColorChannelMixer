@@ -1,6 +1,10 @@
 COlorChannelMixer TODO
 ======================
 
+- Confirm file overwrites.
 - Set result image's dpi according to the dpi of the sources.
 - Reword Gui to speak english (use resource strings)
 - Make the prog process CLI args without forms.
+- Add custom color mixing.
+- Remember last used settings.
+- Try lock and copy method (if it's faster).

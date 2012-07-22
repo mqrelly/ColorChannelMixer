@@ -266,7 +266,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(325, 33);
+            this.label4.Location = new System.Drawing.Point(328, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 4;
@@ -275,7 +275,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(266, 33);
+            this.label3.Location = new System.Drawing.Point(267, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 13);
             this.label3.TabIndex = 3;
@@ -289,15 +289,16 @@
             this.label2.Size = new System.Drawing.Size(13, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "1";
+            this.label2.Visible = false;
             // 
             // SourceNumber_TrackBar
             // 
             this.SourceNumber_TrackBar.LargeChange = 1;
-            this.SourceNumber_TrackBar.Location = new System.Drawing.Point(200, 6);
+            this.SourceNumber_TrackBar.Location = new System.Drawing.Point(260, 6);
             this.SourceNumber_TrackBar.Maximum = 3;
-            this.SourceNumber_TrackBar.Minimum = 1;
+            this.SourceNumber_TrackBar.Minimum = 2;
             this.SourceNumber_TrackBar.Name = "SourceNumber_TrackBar";
-            this.SourceNumber_TrackBar.Size = new System.Drawing.Size(144, 45);
+            this.SourceNumber_TrackBar.Size = new System.Drawing.Size(88, 45);
             this.SourceNumber_TrackBar.TabIndex = 1;
             this.SourceNumber_TrackBar.Value = 2;
             this.SourceNumber_TrackBar.ValueChanged += new System.EventHandler(this.SourceNumber_TrackBar_ValueChanged);

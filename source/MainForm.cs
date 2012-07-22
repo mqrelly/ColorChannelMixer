@@ -36,7 +36,7 @@ namespace ColorChannelMixer
                 break;
 
             case 1:
-                bg_brush = Brushes.Green;
+                bg_brush = Brushes.LightGreen;
                 break;
 
             case 2:
@@ -167,6 +167,7 @@ namespace ColorChannelMixer
 
             // Prepare Gui for the process
             this.SetGuiEnabled(false);
+            this.Process_ProgressBar.Value = 0;
             this.Process_ProgressBar.Maximum = matching_file_names.Count;
             this.Process_ProgressBar.Visible = true;
             this.Process_Button.Text = "Megszakít";
@@ -217,7 +218,7 @@ namespace ColorChannelMixer
                             args.WorkingDir, args.FileNames[i][j]));
 
                     // Do the processing
-                    ColorChannelMixer.ProcessImage(sources, args.Filters, ref result);
+                    ColorChannelMixer.ProcessImage_WithMarshal(sources, args.Filters, ref result);
 
                     // Save result image
                     result.Save(System.IO.Path.Combine(
@@ -227,11 +228,7 @@ namespace ColorChannelMixer
                 }
                 catch( Exception ex )
                 {
-#if DEBUG
-                    System.Diagnostics.Debugger.Break();
-#endif
                     worker.ReportProgress(i, ex);
-
                 }
                 finally
                 {
