@@ -33,15 +33,15 @@
             this.Source3_Panel = new System.Windows.Forms.Panel();
             this.Source3_ColorChannel_ComboBox = new System.Windows.Forms.ComboBox();
             this.Source3_FileNamePattern_TextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.Source3_FilenamePattern_Label = new System.Windows.Forms.Label();
+            this.Source3_ColorChannel_Label = new System.Windows.Forms.Label();
+            this.Source3_Label = new System.Windows.Forms.Label();
             this.Source2_Panel = new System.Windows.Forms.Panel();
             this.Source2_ColorChannel_ComboBox = new System.Windows.Forms.ComboBox();
             this.Source2_FileNamePattern_TextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.Source2_FilenamePattern_Label = new System.Windows.Forms.Label();
+            this.Source2_ColorChannel_Label = new System.Windows.Forms.Label();
+            this.Source2_Label = new System.Windows.Forms.Label();
             this.Process_Button = new System.Windows.Forms.Button();
             this.SourceNumer_Panel = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -52,17 +52,17 @@
             this.Source1_Panel = new System.Windows.Forms.Panel();
             this.Source1_ColorChannel_ComboBox = new System.Windows.Forms.ComboBox();
             this.Source1_FileNamePattern_TextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Source1_FilenamePattern_Label = new System.Windows.Forms.Label();
+            this.Source1_ColorChannel_Label = new System.Windows.Forms.Label();
+            this.Source1_Label = new System.Windows.Forms.Label();
             this.WorkingDirectory_Panel = new System.Windows.Forms.Panel();
+            this.OverwriteExistingFiles_CheckBox = new System.Windows.Forms.CheckBox();
             this.WorkingDirectory_Browser_Button = new System.Windows.Forms.Button();
             this.WorkingDirectory_TextBox = new System.Windows.Forms.TextBox();
             this.WorkingDirectory_Label = new System.Windows.Forms.Label();
             this.Process_ProgressBar = new System.Windows.Forms.ProgressBar();
             this.WorkingDirectory_BrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.Process_Worker = new System.ComponentModel.BackgroundWorker();
-            this.OverwriteExistingFiles_CheckBox = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.Source3_Panel.SuspendLayout();
             this.Source2_Panel.SuspendLayout();
@@ -106,9 +106,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Source3_Panel.Controls.Add(this.Source3_ColorChannel_ComboBox);
             this.Source3_Panel.Controls.Add(this.Source3_FileNamePattern_TextBox);
-            this.Source3_Panel.Controls.Add(this.label11);
-            this.Source3_Panel.Controls.Add(this.label12);
-            this.Source3_Panel.Controls.Add(this.label13);
+            this.Source3_Panel.Controls.Add(this.Source3_FilenamePattern_Label);
+            this.Source3_Panel.Controls.Add(this.Source3_ColorChannel_Label);
+            this.Source3_Panel.Controls.Add(this.Source3_Label);
             this.Source3_Panel.Location = new System.Drawing.Point(0, 181);
             this.Source3_Panel.Margin = new System.Windows.Forms.Padding(0);
             this.Source3_Panel.Name = "Source3_Panel";
@@ -139,33 +139,33 @@
             this.Source3_FileNamePattern_TextBox.TabIndex = 4;
             this.Source3_FileNamePattern_TextBox.Text = "*_*_*";
             // 
-            // label11
+            // Source3_FilenamePattern_Label
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(137, 36);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 13);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Fájlnév minta";
+            this.Source3_FilenamePattern_Label.AutoSize = true;
+            this.Source3_FilenamePattern_Label.Location = new System.Drawing.Point(137, 36);
+            this.Source3_FilenamePattern_Label.Name = "Source3_FilenamePattern_Label";
+            this.Source3_FilenamePattern_Label.Size = new System.Drawing.Size(71, 13);
+            this.Source3_FilenamePattern_Label.TabIndex = 3;
+            this.Source3_FilenamePattern_Label.Text = "Fájlnév minta";
             // 
-            // label12
+            // Source3_ColorChannel_Label
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(137, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(68, 13);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Színcsatorna";
+            this.Source3_ColorChannel_Label.AutoSize = true;
+            this.Source3_ColorChannel_Label.Location = new System.Drawing.Point(137, 9);
+            this.Source3_ColorChannel_Label.Name = "Source3_ColorChannel_Label";
+            this.Source3_ColorChannel_Label.Size = new System.Drawing.Size(68, 13);
+            this.Source3_ColorChannel_Label.TabIndex = 1;
+            this.Source3_ColorChannel_Label.Text = "Színcsatorna";
             // 
-            // label13
+            // Source3_Label
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label13.Location = new System.Drawing.Point(12, 9);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 13);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Forrás 3";
+            this.Source3_Label.AutoSize = true;
+            this.Source3_Label.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Source3_Label.Location = new System.Drawing.Point(12, 9);
+            this.Source3_Label.Name = "Source3_Label";
+            this.Source3_Label.Size = new System.Drawing.Size(53, 13);
+            this.Source3_Label.TabIndex = 0;
+            this.Source3_Label.Text = "Forrás 3";
             // 
             // Source2_Panel
             // 
@@ -173,9 +173,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Source2_Panel.Controls.Add(this.Source2_ColorChannel_ComboBox);
             this.Source2_Panel.Controls.Add(this.Source2_FileNamePattern_TextBox);
-            this.Source2_Panel.Controls.Add(this.label8);
-            this.Source2_Panel.Controls.Add(this.label9);
-            this.Source2_Panel.Controls.Add(this.label10);
+            this.Source2_Panel.Controls.Add(this.Source2_FilenamePattern_Label);
+            this.Source2_Panel.Controls.Add(this.Source2_ColorChannel_Label);
+            this.Source2_Panel.Controls.Add(this.Source2_Label);
             this.Source2_Panel.Location = new System.Drawing.Point(0, 119);
             this.Source2_Panel.Margin = new System.Windows.Forms.Padding(0);
             this.Source2_Panel.Name = "Source2_Panel";
@@ -205,33 +205,33 @@
             this.Source2_FileNamePattern_TextBox.TabIndex = 4;
             this.Source2_FileNamePattern_TextBox.Text = "*_cFOS_*";
             // 
-            // label8
+            // Source2_FilenamePattern_Label
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(137, 36);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 13);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Fájlnév minta";
+            this.Source2_FilenamePattern_Label.AutoSize = true;
+            this.Source2_FilenamePattern_Label.Location = new System.Drawing.Point(137, 36);
+            this.Source2_FilenamePattern_Label.Name = "Source2_FilenamePattern_Label";
+            this.Source2_FilenamePattern_Label.Size = new System.Drawing.Size(71, 13);
+            this.Source2_FilenamePattern_Label.TabIndex = 3;
+            this.Source2_FilenamePattern_Label.Text = "Fájlnév minta";
             // 
-            // label9
+            // Source2_ColorChannel_Label
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(137, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Színcsatorna";
+            this.Source2_ColorChannel_Label.AutoSize = true;
+            this.Source2_ColorChannel_Label.Location = new System.Drawing.Point(137, 9);
+            this.Source2_ColorChannel_Label.Name = "Source2_ColorChannel_Label";
+            this.Source2_ColorChannel_Label.Size = new System.Drawing.Size(68, 13);
+            this.Source2_ColorChannel_Label.TabIndex = 1;
+            this.Source2_ColorChannel_Label.Text = "Színcsatorna";
             // 
-            // label10
+            // Source2_Label
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label10.Location = new System.Drawing.Point(12, 9);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Forrás 2";
+            this.Source2_Label.AutoSize = true;
+            this.Source2_Label.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Source2_Label.Location = new System.Drawing.Point(12, 9);
+            this.Source2_Label.Name = "Source2_Label";
+            this.Source2_Label.Size = new System.Drawing.Size(53, 13);
+            this.Source2_Label.TabIndex = 0;
+            this.Source2_Label.Text = "Forrás 2";
             // 
             // Process_Button
             // 
@@ -320,9 +320,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Source1_Panel.Controls.Add(this.Source1_ColorChannel_ComboBox);
             this.Source1_Panel.Controls.Add(this.Source1_FileNamePattern_TextBox);
-            this.Source1_Panel.Controls.Add(this.label7);
-            this.Source1_Panel.Controls.Add(this.label6);
-            this.Source1_Panel.Controls.Add(this.label5);
+            this.Source1_Panel.Controls.Add(this.Source1_FilenamePattern_Label);
+            this.Source1_Panel.Controls.Add(this.Source1_ColorChannel_Label);
+            this.Source1_Panel.Controls.Add(this.Source1_Label);
             this.Source1_Panel.Location = new System.Drawing.Point(0, 57);
             this.Source1_Panel.Margin = new System.Windows.Forms.Padding(0);
             this.Source1_Panel.Name = "Source1_Panel";
@@ -352,33 +352,33 @@
             this.Source1_FileNamePattern_TextBox.TabIndex = 4;
             this.Source1_FileNamePattern_TextBox.Text = "*_CTB_*";
             // 
-            // label7
+            // Source1_FilenamePattern_Label
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(137, 36);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 3;
-            this.label7.Text = "Fájlnév minta";
+            this.Source1_FilenamePattern_Label.AutoSize = true;
+            this.Source1_FilenamePattern_Label.Location = new System.Drawing.Point(137, 36);
+            this.Source1_FilenamePattern_Label.Name = "Source1_FilenamePattern_Label";
+            this.Source1_FilenamePattern_Label.Size = new System.Drawing.Size(71, 13);
+            this.Source1_FilenamePattern_Label.TabIndex = 3;
+            this.Source1_FilenamePattern_Label.Text = "Fájlnév minta";
             // 
-            // label6
+            // Source1_ColorChannel_Label
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(137, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(68, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Színcsatorna";
+            this.Source1_ColorChannel_Label.AutoSize = true;
+            this.Source1_ColorChannel_Label.Location = new System.Drawing.Point(137, 9);
+            this.Source1_ColorChannel_Label.Name = "Source1_ColorChannel_Label";
+            this.Source1_ColorChannel_Label.Size = new System.Drawing.Size(68, 13);
+            this.Source1_ColorChannel_Label.TabIndex = 1;
+            this.Source1_ColorChannel_Label.Text = "Színcsatorna";
             // 
-            // label5
+            // Source1_Label
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label5.Location = new System.Drawing.Point(12, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Forrás 1";
+            this.Source1_Label.AutoSize = true;
+            this.Source1_Label.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Source1_Label.Location = new System.Drawing.Point(12, 9);
+            this.Source1_Label.Name = "Source1_Label";
+            this.Source1_Label.Size = new System.Drawing.Size(53, 13);
+            this.Source1_Label.TabIndex = 0;
+            this.Source1_Label.Text = "Forrás 1";
             // 
             // WorkingDirectory_Panel
             // 
@@ -393,6 +393,18 @@
             this.WorkingDirectory_Panel.Name = "WorkingDirectory_Panel";
             this.WorkingDirectory_Panel.Size = new System.Drawing.Size(360, 76);
             this.WorkingDirectory_Panel.TabIndex = 4;
+            // 
+            // OverwriteExistingFiles_CheckBox
+            // 
+            this.OverwriteExistingFiles_CheckBox.AutoSize = true;
+            this.OverwriteExistingFiles_CheckBox.Checked = true;
+            this.OverwriteExistingFiles_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.OverwriteExistingFiles_CheckBox.Location = new System.Drawing.Point(28, 53);
+            this.OverwriteExistingFiles_CheckBox.Name = "OverwriteExistingFiles_CheckBox";
+            this.OverwriteExistingFiles_CheckBox.Size = new System.Drawing.Size(133, 17);
+            this.OverwriteExistingFiles_CheckBox.TabIndex = 3;
+            this.OverwriteExistingFiles_CheckBox.Text = "Létező fájlok felülírása";
+            this.OverwriteExistingFiles_CheckBox.UseVisualStyleBackColor = true;
             // 
             // WorkingDirectory_Browser_Button
             // 
@@ -451,18 +463,6 @@
             this.Process_Worker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.Process_Worker_ProgressChanged);
             this.Process_Worker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.Process_Worker_RunWorkerCompleted);
             // 
-            // OverwriteFiles_CheckBox
-            // 
-            this.OverwriteExistingFiles_CheckBox.AutoSize = true;
-            this.OverwriteExistingFiles_CheckBox.Checked = true;
-            this.OverwriteExistingFiles_CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.OverwriteExistingFiles_CheckBox.Location = new System.Drawing.Point(28, 53);
-            this.OverwriteExistingFiles_CheckBox.Name = "OverwriteExistingFiles_CheckBox";
-            this.OverwriteExistingFiles_CheckBox.Size = new System.Drawing.Size(133, 17);
-            this.OverwriteExistingFiles_CheckBox.TabIndex = 3;
-            this.OverwriteExistingFiles_CheckBox.Text = "Létező fájlok felülírása";
-            this.OverwriteExistingFiles_CheckBox.UseVisualStyleBackColor = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,6 +475,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Színcsatorna keverő";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -506,19 +507,19 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox Source1_FileNamePattern_TextBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Source1_FilenamePattern_Label;
+        private System.Windows.Forms.Label Source1_ColorChannel_Label;
+        private System.Windows.Forms.Label Source1_Label;
         private System.Windows.Forms.Panel Source3_Panel;
         private System.Windows.Forms.TextBox Source3_FileNamePattern_TextBox;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label Source3_FilenamePattern_Label;
+        private System.Windows.Forms.Label Source3_ColorChannel_Label;
+        private System.Windows.Forms.Label Source3_Label;
         private System.Windows.Forms.Panel Source2_Panel;
         private System.Windows.Forms.TextBox Source2_FileNamePattern_TextBox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label Source2_FilenamePattern_Label;
+        private System.Windows.Forms.Label Source2_ColorChannel_Label;
+        private System.Windows.Forms.Label Source2_Label;
         private System.Windows.Forms.Panel WorkingDirectory_Panel;
         private System.Windows.Forms.Label WorkingDirectory_Label;
         private System.Windows.Forms.Button WorkingDirectory_Browser_Button;

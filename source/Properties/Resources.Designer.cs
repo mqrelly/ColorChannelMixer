@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ColorChannelMixer.Properties
-{
-
-
+namespace ColorChannelMixer.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,49 +22,176 @@ namespace ColorChannelMixer.Properties
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if( (resourceMan == null) )
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ColorChannelMixer.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        internal static string Cancel_Button {
+            get {
+                return ResourceManager.GetString("Cancel_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color channel.
+        /// </summary>
+        internal static string ColorChannel_Label {
+            get {
+                return ResourceManager.GetString("ColorChannel_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was an error: \n{0}.
+        /// </summary>
+        internal static string EndProcessError_Message {
+            get {
+                return ResourceManager.GetString("EndProcessError_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        internal static string Error_Title {
+            get {
+                return ResourceManager.GetString("Error_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Filename pattern.
+        /// </summary>
+        internal static string FilenamePattern_Label {
+            get {
+                return ResourceManager.GetString("FilenamePattern_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There was an error whit the current image. Continue whit the rest.\n({0}).
+        /// </summary>
+        internal static string InProcessError_Message {
+            get {
+                return ResourceManager.GetString("InProcessError_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Didn&apos;t find any source images..
+        /// </summary>
+        internal static string NoSourceFiles_Message {
+            get {
+                return ResourceManager.GetString("NoSourceFiles_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No source images.
+        /// </summary>
+        internal static string NoSourceFiles_Title {
+            get {
+                return ResourceManager.GetString("NoSourceFiles_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Overwrite esxisting files.
+        /// </summary>
+        internal static string OverwriteExistingFiles_CheckBox {
+            get {
+                return ResourceManager.GetString("OverwriteExistingFiles_CheckBox", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Process images.
+        /// </summary>
+        internal static string Process_Button {
+            get {
+                return ResourceManager.GetString("Process_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Source {0}.
+        /// </summary>
+        internal static string SourceN_Label {
+            get {
+                return ResourceManager.GetString("SourceN_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Number of sources.
+        /// </summary>
+        internal static string SourceNumber_Label {
+            get {
+                return ResourceManager.GetString("SourceNumber_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User canceled the operation..
+        /// </summary>
+        internal static string UserCanceled_Message {
+            get {
+                return ResourceManager.GetString("UserCanceled_Message", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Canceled.
+        /// </summary>
+        internal static string UserCanceled_Title {
+            get {
+                return ResourceManager.GetString("UserCanceled_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Working directory.
+        /// </summary>
+        internal static string WorkingDirectory_Label {
+            get {
+                return ResourceManager.GetString("WorkingDirectory_Label", resourceCulture);
             }
         }
     }

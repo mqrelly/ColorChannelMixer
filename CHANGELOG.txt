@@ -1,6 +1,7 @@
 ColorChannelMixer Changelog
 ===========================
 
+- Reword Gui to speak english (use resource strings).
 - Chekc existing files before overwrite.
 - 10x speedup in ProcessImage using Lock/UnlockBits() and Marshal.Read/WriteByte().
 - Make the process cancelable.

@@ -14,6 +14,7 @@ namespace ColorChannelMixer
         {
             InitializeComponent();
 
+            this.SetupTranslations();
             this.Source1_ColorChannel_ComboBox.SelectedIndex = 0;
             this.Source2_ColorChannel_ComboBox.SelectedIndex = 1;
             this.Source3_ColorChannel_ComboBox.SelectedIndex = 2;
@@ -23,6 +24,23 @@ namespace ColorChannelMixer
         #endregion
 
         #region Gui commands
+
+        private void SetupTranslations()
+        {
+            this.SourceNumber_Label.Text = Properties.Resources.SourceNumber_Label;
+            this.Source1_Label.Text = string.Format(Properties.Resources.SourceN_Label, "1");
+            this.Source2_Label.Text = string.Format(Properties.Resources.SourceN_Label, "2");
+            this.Source3_Label.Text = string.Format(Properties.Resources.SourceN_Label, "3");
+            this.Source1_ColorChannel_Label.Text = Properties.Resources.ColorChannel_Label;
+            this.Source2_ColorChannel_Label.Text = Properties.Resources.ColorChannel_Label;
+            this.Source3_ColorChannel_Label.Text = Properties.Resources.ColorChannel_Label;
+            this.Source1_FilenamePattern_Label.Text = Properties.Resources.FilenamePattern_Label;
+            this.Source2_FilenamePattern_Label.Text = Properties.Resources.FilenamePattern_Label;
+            this.Source3_FilenamePattern_Label.Text = Properties.Resources.FilenamePattern_Label;
+            this.WorkingDirectory_Label.Text = Properties.Resources.WorkingDirectory_Label;
+            this.OverwriteExistingFiles_CheckBox.Text = Properties.Resources.OverwriteExistingFiles_CheckBox;
+            this.Process_Button.Text = Properties.Resources.Process_Button;
+        }
 
         private void ColorChannel_ComboBox_DrawItem( object sender, DrawItemEventArgs e )
         {
@@ -159,8 +177,8 @@ namespace ColorChannelMixer
             {
                 MessageBox.Show(
                     this,
-                    "Nem találtam megfelelő forrásképeket.",
-                    "Figyelem",
+                    Properties.Resources.NoSourceFiles_Message,
+                    Properties.Resources.NoSourceFiles_Title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Exclamation);
                 return;
@@ -171,7 +189,7 @@ namespace ColorChannelMixer
             this.Process_ProgressBar.Value = 0;
             this.Process_ProgressBar.Maximum = matching_file_names.Count;
             this.Process_ProgressBar.Visible = true;
-            this.Process_Button.Text = "Megszakít";
+            this.Process_Button.Text = Properties.Resources.Cancel_Button;
 
             // Start worker thread with
             this.Process_Worker.RunWorkerAsync(new ProcessArguments()
@@ -262,8 +280,8 @@ namespace ColorChannelMixer
                 var ex = e.UserState as Exception;
                 MessageBox.Show(
                     this,
-                    string.Format("Hiba történt:\n{0}", ex.Message),
-                    "Hiba",
+                    string.Format(Properties.Resources.InProcessError_Message, ex.Message),
+                    Properties.Resources.Error_Title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -276,15 +294,15 @@ namespace ColorChannelMixer
             // Restore Gui
             this.Process_ProgressBar.Visible = false;
             this.SetGuiEnabled(true);
-            this.Process_Button.Text = "Feldolgozás";
+            this.Process_Button.Text = Properties.Resources.Process_Button;
             this.Process_Button.Enabled = true;
 
             if( e.Cancelled )
             {
                 MessageBox.Show(
                     this,
-                    "Felhasználó megszakította.",
-                    "Kész",
+                    Properties.Resources.UserCanceled_Message,
+                    Properties.Resources.UserCanceled_Title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
@@ -292,20 +310,22 @@ namespace ColorChannelMixer
             {
                 MessageBox.Show(
                     this,
-                    string.Format("Hiba történt: {0}\n", e.Error.Message),
-                    "Hiba",
+                    string.Format(Properties.Resources.EndProcessError_Message, e.Error.Message),
+                    Properties.Resources.Error_Title,
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
+#if DEBUG
             else
             {
                 MessageBox.Show(
                     this,
-                    string.Format("Eltelt idő: {0:0}s", (double)e.Result),
-                    "Kész",
+                    string.Format("Elapsed time: {0:0}s", (double)e.Result),
+                    "Debug",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
+#endif
         }
 
         #endregion

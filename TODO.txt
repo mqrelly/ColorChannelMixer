@@ -1,9 +1,11 @@
 COlorChannelMixer TODO
 ======================
 
-- Set result image's dpi according to the dpi of the sources.
-- Reword Gui to speak english (use resource strings)
-- Make the prog process CLI args without forms.
-- Add custom color mixing.
+- Add the possibility to filter one source (extract a color channel).
+- Add destination filename pattern (read only?) after the source panels.
+- Add a label showing the current dest file in processing.
 - Remember last used settings.
-- Try lock and copy method (if it's faster).
+- Try the lock-and-copy method (if it's faster).
+- Set result image's dpi according to the dpi of the sources.
+- Add custom color mixing.
+- Make the prog process CLI args without forms.
