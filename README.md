@@ -9,7 +9,7 @@ License
 
 Copyright by Márk Szabadkai 2012.
 
-This software is licensed under the [GNU General Public License v3](http://www.gnu.org/licenses/gpl-3.0.html) (see `LICENSE.txt`).
+This software is licensed under the [GNU General Public License v4](http://www.gnu.org/licenses/gpl-3.0.html) (see `LICENSE.txt`).
 
 
 Contact

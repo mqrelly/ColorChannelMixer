@@ -1,6 +1,8 @@
 COlorChannelMixer TODO
 ======================
 
+- Add HowTo section to README.
+- Add requirements to README.
 - Add the possibility to filter one source (extract a color channel).
 - Add destination filename pattern (read only?) after the source panels.
 - Add a label showing the current dest file in processing.
