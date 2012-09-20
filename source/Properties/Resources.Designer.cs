@@ -169,6 +169,51 @@ namespace ColorChannelMixer.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bitmap (*.bmp).
+        /// </summary>
+        internal static string TargetImageFormat_Bmp {
+            get {
+                return ResourceManager.GetString("TargetImageFormat_Bmp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Jpeg (*.jpg).
+        /// </summary>
+        internal static string TargetImageFormat_Jpeg {
+            get {
+                return ResourceManager.GetString("TargetImageFormat_Jpeg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target image format.
+        /// </summary>
+        internal static string TargetImageFormat_Label {
+            get {
+                return ResourceManager.GetString("TargetImageFormat_Label", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Portable Network Graphics (*.png).
+        /// </summary>
+        internal static string TargetImageFormat_Png {
+            get {
+                return ResourceManager.GetString("TargetImageFormat_Png", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tiff (*.tif).
+        /// </summary>
+        internal static string TargetImageFormat_Tiff {
+            get {
+                return ResourceManager.GetString("TargetImageFormat_Tiff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User canceled the operation..
         /// </summary>
         internal static string UserCanceled_Message {

@@ -8,6 +8,24 @@ namespace ColorChannelMixer
 {
     public partial class MainForm : Form
     {
+        #region Image formats
+
+        private struct ImageFormat
+        {
+            public System.Drawing.Imaging.ImageFormat Format;
+            public string Extension;
+        }
+
+        private static ImageFormat[] TargetImageFormats = new ImageFormat[]
+        {
+            new ImageFormat(){ Format = System.Drawing.Imaging.ImageFormat.Tiff, Extension = "tif" },
+            new ImageFormat(){ Format = System.Drawing.Imaging.ImageFormat.Bmp, Extension = "bmp" },
+            new ImageFormat(){ Format = System.Drawing.Imaging.ImageFormat.Jpeg, Extension = "jpg" },
+            new ImageFormat(){ Format = System.Drawing.Imaging.ImageFormat.Png, Extension = "png" },
+        };
+
+        #endregion
+
         #region Constructor
 
         public MainForm()
@@ -39,7 +57,16 @@ namespace ColorChannelMixer
             this.Source3_FilenamePattern_Label.Text = Properties.Resources.FilenamePattern_Label;
             this.WorkingDirectory_Label.Text = Properties.Resources.WorkingDirectory_Label;
             this.OverwriteExistingFiles_CheckBox.Text = Properties.Resources.OverwriteExistingFiles_CheckBox;
+            this.TargetImageFormat_Label.Text = Properties.Resources.TargetImageFormat_Label;
             this.Process_Button.Text = Properties.Resources.Process_Button;
+
+            this.TargetImageFormat_ComboBox.BeginUpdate();
+            this.TargetImageFormat_ComboBox.Items.Clear();
+            foreach( var frm in TargetImageFormats )
+                this.TargetImageFormat_ComboBox.Items.Add(
+                    Properties.Resources.ResourceManager.GetString("TargetImageFormat_" + frm.Format.ToString()));
+            this.TargetImageFormat_ComboBox.EndUpdate();
+            this.TargetImageFormat_ComboBox.SelectedIndex = 0;
         }
 
         private void ColorChannel_ComboBox_DrawItem( object sender, DrawItemEventArgs e )
@@ -151,6 +178,7 @@ namespace ColorChannelMixer
             public List<string[]> FileNames;
             public Color[] Filters;
             public bool OverwriteExistingFiles;
+            public int TargetImageFormatIndex;
         }
 
         private void Process_Start()
@@ -193,12 +221,13 @@ namespace ColorChannelMixer
 
             // Start worker thread with
             this.Process_Worker.RunWorkerAsync(new ProcessArguments()
-                {
-                    WorkingDir = this.WorkingDirectory_TextBox.Text,
-                    FileNames = matching_file_names,
-                    Filters = filters.ToArray(),
-                    OverwriteExistingFiles = this.OverwriteExistingFiles_CheckBox.Checked,
-                });
+            {
+                WorkingDir = this.WorkingDirectory_TextBox.Text,
+                FileNames = matching_file_names,
+                Filters = filters.ToArray(),
+                OverwriteExistingFiles = this.OverwriteExistingFiles_CheckBox.Checked,
+                TargetImageFormatIndex = this.TargetImageFormat_ComboBox.SelectedIndex,
+            });
         }
 
         private static Color ComboBoxSelectionToFilter( int selected_index )
@@ -243,6 +272,8 @@ namespace ColorChannelMixer
                     // Save result image
                     string result_file = System.IO.Path.Combine(
                         args.WorkingDir, args.FileNames[i][rslt_ind]);
+                    System.IO.Path.ChangeExtension(result_file, 
+                        TargetImageFormats[args.TargetImageFormatIndex].Extension);
                     if( System.IO.File.Exists(result_file) &&
                         !args.OverwriteExistingFiles )
                     {
@@ -250,7 +281,8 @@ namespace ColorChannelMixer
                     }
                     else
                     {
-                        result.Save(result_file);
+                        result.Save(result_file,
+                            TargetImageFormats[args.TargetImageFormatIndex].Format);
                     }
 
                     worker.ReportProgress(i);

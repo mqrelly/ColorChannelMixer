@@ -162,4 +162,19 @@
   <data name="UserCanceled_Title" xml:space="preserve">
     <value>Canceled</value>
   </data>
+  <data name="TargetImageFormat_Bmp" xml:space="preserve">
+    <value>Bitmap (*.bmp)</value>
+  </data>
+  <data name="TargetImageFormat_Jpeg" xml:space="preserve">
+    <value>Jpeg (*.jpg)</value>
+  </data>
+  <data name="TargetImageFormat_Label" xml:space="preserve">
+    <value>Target image format</value>
+  </data>
+  <data name="TargetImageFormat_Png" xml:space="preserve">
+    <value>Portable Network Graphics (*.png)</value>
+  </data>
+  <data name="TargetImageFormat_Tiff" xml:space="preserve">
+    <value>Tiff (*.tif)</value>
+  </data>
 </root>

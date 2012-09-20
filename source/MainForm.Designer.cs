@@ -63,6 +63,8 @@
             this.Process_ProgressBar = new System.Windows.Forms.ProgressBar();
             this.WorkingDirectory_BrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.Process_Worker = new System.ComponentModel.BackgroundWorker();
+            this.TargetImageFormat_Label = new System.Windows.Forms.Label();
+            this.TargetImageFormat_ComboBox = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.Source3_Panel.SuspendLayout();
             this.Source2_Panel.SuspendLayout();
@@ -239,7 +241,7 @@
             this.Process_Button.AutoSize = true;
             this.Process_Button.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Process_Button.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Process_Button.Location = new System.Drawing.Point(263, 369);
+            this.Process_Button.Location = new System.Drawing.Point(263, 371);
             this.Process_Button.Margin = new System.Windows.Forms.Padding(6);
             this.Process_Button.Name = "Process_Button";
             this.Process_Button.Padding = new System.Windows.Forms.Padding(3);
@@ -384,6 +386,8 @@
             // 
             this.WorkingDirectory_Panel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.WorkingDirectory_Panel.Controls.Add(this.TargetImageFormat_ComboBox);
+            this.WorkingDirectory_Panel.Controls.Add(this.TargetImageFormat_Label);
             this.WorkingDirectory_Panel.Controls.Add(this.OverwriteExistingFiles_CheckBox);
             this.WorkingDirectory_Panel.Controls.Add(this.WorkingDirectory_Browser_Button);
             this.WorkingDirectory_Panel.Controls.Add(this.WorkingDirectory_TextBox);
@@ -391,7 +395,7 @@
             this.WorkingDirectory_Panel.Location = new System.Drawing.Point(0, 243);
             this.WorkingDirectory_Panel.Margin = new System.Windows.Forms.Padding(0);
             this.WorkingDirectory_Panel.Name = "WorkingDirectory_Panel";
-            this.WorkingDirectory_Panel.Size = new System.Drawing.Size(360, 76);
+            this.WorkingDirectory_Panel.Size = new System.Drawing.Size(360, 104);
             this.WorkingDirectory_Panel.TabIndex = 4;
             // 
             // OverwriteExistingFiles_CheckBox
@@ -443,7 +447,7 @@
             // 
             this.Process_ProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Process_ProgressBar.Location = new System.Drawing.Point(16, 322);
+            this.Process_ProgressBar.Location = new System.Drawing.Point(16, 350);
             this.Process_ProgressBar.Margin = new System.Windows.Forms.Padding(16, 3, 12, 3);
             this.Process_ProgressBar.Name = "Process_ProgressBar";
             this.Process_ProgressBar.Size = new System.Drawing.Size(332, 12);
@@ -462,6 +466,25 @@
             this.Process_Worker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Process_Worker_DoWork);
             this.Process_Worker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.Process_Worker_ProgressChanged);
             this.Process_Worker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.Process_Worker_RunWorkerCompleted);
+            // 
+            // TargetImageFormat_Label
+            // 
+            this.TargetImageFormat_Label.AutoSize = true;
+            this.TargetImageFormat_Label.Location = new System.Drawing.Point(25, 77);
+            this.TargetImageFormat_Label.Name = "TargetImageFormat_Label";
+            this.TargetImageFormat_Label.Size = new System.Drawing.Size(121, 13);
+            this.TargetImageFormat_Label.TabIndex = 4;
+            this.TargetImageFormat_Label.Text = "Eredmény képformátum";
+            // 
+            // TargetImageFormat_ComboBox
+            // 
+            this.TargetImageFormat_ComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TargetImageFormat_ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.TargetImageFormat_ComboBox.FormattingEnabled = true;
+            this.TargetImageFormat_ComboBox.Location = new System.Drawing.Point(230, 74);
+            this.TargetImageFormat_ComboBox.Name = "TargetImageFormat_ComboBox";
+            this.TargetImageFormat_ComboBox.Size = new System.Drawing.Size(118, 21);
+            this.TargetImageFormat_ComboBox.TabIndex = 5;
             // 
             // MainForm
             // 
@@ -531,6 +554,8 @@
         private System.Windows.Forms.ProgressBar Process_ProgressBar;
         private System.ComponentModel.BackgroundWorker Process_Worker;
         private System.Windows.Forms.CheckBox OverwriteExistingFiles_CheckBox;
+        private System.Windows.Forms.ComboBox TargetImageFormat_ComboBox;
+        private System.Windows.Forms.Label TargetImageFormat_Label;
     }
 }
 
